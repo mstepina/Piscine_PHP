@@ -38,8 +38,6 @@
 			{
 				$n_students = 0;
 				$sum_grade = 0;
-				//$re = 0;
-	
 				foreach ($student as $elem)
 				{
 					$tab = explode (";", $elem);
@@ -56,34 +54,6 @@
 				}
 			}
 		}
-		// elseif ($argv[1] == "average_user") 
-		// {
-		// 	asort($data);
-		// 	foreach ($data as $elem)
-		// 	{
-		// 		$tab = explode(";", $elem); // tab from line
-		// 		$student_list[$tab[0]] = 0; // makes a list of students with grades for each
-		// 	}
-		// 	foreach($student_list as $student => $grade) // makes a hashtable 
-		// 	{
-		// 		$count = 0;
-		// 		$peer_grade = 0;
-		// 		foreach ($data as $elem) 
-		// 		{
-		// 			$tab = explode(";", $elem); // makes tab again
-		// 			if ($tab[0] == $student && $tab[1] != "") // student in tab is the same as in student_list
-		// 			{
-		// 				$peer_grade += $tab[1];
-		// 				$count += 1;
-		// 			}
-		// 		}
-		// 		if ($count > 0) // at least one grade for this student exists
-		// 		{
-		// 			$res = $peer_grade / $count;
-		// 			echo "$student:$res\n";
-		// 		}
-		// 	} 
-		// }
 		elseif($argv[1] == "moulinette_variance")
 		{
 			asort($data);
