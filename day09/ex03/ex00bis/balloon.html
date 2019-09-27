@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#balloon {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	margin: auto;
+	margin-top: 300px;
+	display: block;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	var	margintop = 300;
+	var size = 200;
+	var color = "red";
+
+	$(document).ready(function() {
+		$('#balloon').click(increase);
+		$('#balloon').mouseleave(decrease);
+	})
+	function increase() {
+		if (size > 420) {
+			margintop = 300;
+			size = 200;
+		}
+		else {
+			size += 10;
+			margintop -= 5;
+		}
+		
+		if (color == "red")
+			color = "green";
+		else if (color == "green")
+			color = "blue";
+		else if (color == "blue")
+			color = "red";
+
+		$('#balloon').css('backgroundColor', color);
+		$('#balloon').css('marginTop', margintop);
+		$('#balloon').css('width', size);
+		$('#balloon').css('height', size);
+	}
+	function decrease() {
+		if (size > 200) {
+			size -= 5;
+			margintop += 2.5;
+			
+		if (color == "red")
+			color = "blue";
+		else if (color == "green")
+			color = "red";
+		else if (color == "blue")
+			color = "green";
+			$('#balloon').css('backgroundColor', color);
+			$('#balloon').css('marginTop', margintop);
+			$('#balloon').css('width', size);
+			$('#balloon').css('height', size);
+		}
+	}
+</script>
+</head>
+	<body>
+		<div id="balloon"></div>
+	</body>
+</html>

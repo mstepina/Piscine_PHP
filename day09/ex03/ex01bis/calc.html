@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-color: #64C4D8;
+	}
+	.styled-select
+	 select
+	 {
+		background: transparent;
+		border: none;
+		font-family: Helvetica sans-serif;
+		font-size: 16px;
+		height: 42px;
+		padding: 5px;
+		width: 288px;
+		outline:none;
+	}
+
+	.styled-select
+	 {
+		background: #ECE900;
+		height: 42px;
+		width: 312px;
+		font-size: 16px;
+		width: 100%;
+		margin-top: 3px;
+		display: block;
+		margin-bottom: 20px; 
+	}
+
+	.block {
+		width: 400px;
+		padding: 8% 0 0;
+		margin: auto;
+	}
+	form {
+		position: relative;
+		z-index: 1;
+		background: #FFFFFF;
+		max-width: 360px;
+		margin: 0 auto 100px;
+		padding: 45px;
+		text-align: center;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	}
+	form input {
+		font-family: Helvetica, sans-serif;
+		outline: 0;
+		background: #f2f2f2;
+		width: 100%;
+		border: 0;
+		margin: 0 0 15px;
+		padding: 15px;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+	form button {
+		font-family: Helvetica, sans-serif;
+		text-transform: uppercase;
+		outline: 0;
+		background: #FF007C;
+		width: 100%;
+		border: 0;
+		padding: 15px;
+		color: #FFFFFF;
+		font-size: 14px;
+		-webkit-transition: all 0.3 ease;
+		transition: all 0.3 ease;
+		cursor: pointer;
+	}
+	form .submit:hover,.form .submit:active,.form .submit:focus {
+		background: #5e2f62;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		setTimeout(pop_up, 30000);
+	})
+	function pop_up() {
+		alert('Please, use me...');
+		setTimeout(pop_up, 30000);
+	}
+	function calc(form) {
+		var operator = form.elements["operator"].value;
+		var left_member = form.elements["left_member"].value;
+		var right_member = form.elements["right_member"].value;
+		if (!isInt(left_member) || !isInt(right_member)) {
+			alert('Error :(');
+		}
+		else {
+			left_member = parseInt(left_member, 10);
+			right_member = parseInt(right_member, 10);
+			if (left_member < 0 || right_member < 0) {
+				alert('Error :(');
+			}
+			else {
+				if (operator == "+") {
+					result(left_member + right_member);
+				}
+				else if (operator == "-") {
+					result(left_member - right_member);
+				}
+				else if (operator == "*") {
+					result(left_member * right_member);
+				}
+				else if (operator == "/") {
+					if (right_member == 0) {
+						result('It’s over 9000!');
+					}
+					else {
+						result(left_member / right_member);
+					}
+				}
+				else if (operator == "%") {
+					if (right_member == 0) {
+						result('It’s over 9000!');
+					}
+					else {
+						result(left_member % right_member);
+					}
+				}
+			}
+		}
+	}
+	function isInt(value) {
+		return (!isNaN(value) && parseInt(Number(value)) == value && !isNaN(parseInt(value, 10)));
+	}
+	function result(value) {
+		console.log(value);
+		alert(value);
+	}
+
+</script>
+</head>
+<body>
+	<div class="block">
+		<form onsubmit="calc(this)" action="">
+			<input id="left_member" type="text">
+			<div class="styled-select">
+				<select
+				 name="operator" class="custom-select" >
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+			</div>
+			<input id="right_member" type="text">
+			<button id="submit" name="submit" value="OK">Try me!</button>
+		</form>
+	</div>
+</body>
+</html>
