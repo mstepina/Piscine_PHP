@@ -1,0 +1,60 @@
+
+.menuClass > ul{
+  background-color: #74CB1C;
+  font-size: 20px;
+  font-family: Helvetica sans-serif;
+  width: 650px;
+}
+
+.menuClass > ul > li {
+  list-style-type: none;
+  display:inline-block; 
+  padding: 5px 25px;
+  position: relative;
+  margin-left: 25px;
+  margin-right:25px;
+
+}
+
+.menuClass > ul > li:hover {
+  background-color: #78B44E;
+  }
+
+  ul.sub {
+    position:absolute;
+    background-color: #78B44E;
+    list-style-type: none;
+    width: 146px;
+    padding-left: 0px;
+    padding-top: 7px;
+    display: none;
+    margin-left: -25px;
+
+  }
+
+  ul.sub li {
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px; 
+  }
+
+
+  .menuClass li:hover .sub {
+    display:block;
+  }
+
+  ul.sub li:hover {
+    color: white;
+    background-color: #38D900;
+  }
+
+#snacks {
+  padding-left: 25px;
+  padding-right: 65px;
+}
+
+#drinks {
+  padding-left: 25px;
+  padding-right: 66px;
+}

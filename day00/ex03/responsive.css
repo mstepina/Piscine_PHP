@@ -1,0 +1,93 @@
+body {
+
+	color: black;
+	background-color: white;
+}
+
+table {
+  		text-align: center;
+  		vertical-align: middle;
+  		font-family: Helvetica, sans-serif;
+  		background-color: inherit;
+  		color:inherit;
+  		margin-left: auto;
+  		margin-right: auto;
+}
+td {
+	background-color: inherit;
+	color: inherit;
+  	font-size: 1.8vw;
+  	font-weight: bold;
+  	width: 5.5vw;
+  	padding: 0.1vw;
+  	page-break-inside: avoid;
+  
+}
+
+th {
+  background-color: #DCD6D4;
+  color: black;
+  line-height: 1vw;
+  height: 2vw;
+  font-size: 1.3vw;
+}
+
+.alkalimetal {
+	background-color: #F9C000;
+	color: inherit;
+}
+.earthmetal {
+	background-color: #47A7B0;
+	color: inherit;
+}
+.l-nide {
+	background-color: #EFAAF3;
+	color: inherit;
+}
+.a-nide {
+	background-color: #AABFF3;
+	color: inherit;
+}
+.transmetal {
+	background-color: #AB4040;
+	color:inherit;
+}
+.posttransmetal {
+	background-color: #1E73FD;
+	color:inherit;
+}
+.metalloid {
+	background-color: #CDD45F;
+	color: inherit;
+}
+.nonmetal {
+	background-color: #409C55;
+	color: inherit;
+}
+.noblegas {
+	background-color: #B8EDFC;
+	color: inherit;
+}
+.unknown {
+	background-color: #F9F3D3;
+	color: inherit;
+}
+
+.mass {
+	text-align: right;
+	font-weight: normal;
+	font-size: 0.9vw;
+	margin: 0.2vw 0.2vw 0.5vw 0.2vw;
+}
+
+.number {
+	text-align: left;
+	font-weight: normal;
+	font-size: 0.8vw;
+	margin: 0.5vw 0.2vw 0.2vw 0.2vw;
+}
+
+table img {
+	width: 17vw;
+	height: 12vw;
+}
